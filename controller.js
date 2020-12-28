@@ -15,3 +15,14 @@ exports.tampilSemua=function(req,res){
         }
     })
 };
+// menampilkasn semua data berdasarkan id
+exports.tampilid=function(req,res){
+    let id=req.params.id;
+    connection.query('SELECT * FROM mahasiswa WHERE id_mhs=?',[id],function(Error,rows,fileds){
+        if(Error){
+            connection.log(Error)
+        }else{
+            response.ok(rows,res)
+        }
+    })
+}
