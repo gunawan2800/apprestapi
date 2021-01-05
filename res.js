@@ -10,6 +10,7 @@ exports.ok=function(values,res){
      res.json(data);
      res.end();
 }
+
 // response untuk nested 
 exports.oknested=function(values,res){
     // lakukan akumulasi
